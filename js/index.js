@@ -2,13 +2,14 @@ const app = Vue.createApp({
     data() {
         return {
             query: '',
-            data : []
+            data : [],
+            found: []
         }
     },
-    computed: {
-        searchedData() {
+    methods: {
+        search: _.debounce(function() {
             let q = this.query.toLowerCase();
-            return this.data.filter((d) => {
+            this.found = this.data.filter((d) => {
                 if(Array.isArray(d)) {
                     return d[0].toString().toLowerCase().includes(q)
                         || d[1].toString().toLowerCase().includes(q)
@@ -21,13 +22,11 @@ const app = Vue.createApp({
                 }
                 return false;
             });
-        },
-    },
-    methods: {
-
+        }, 300)
     },
     created() {
-        this.data = JSON.parse(atob(encoded));
+        this.data  = JSON.parse(atob(encoded));
+        this.found = this.data;
     }
 });
 
