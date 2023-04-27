@@ -1,3 +1,19 @@
 [v-cloak] {
     display: none;
 }
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+    border-radius: 80px;
+    padding-left: 45px;
+}
+
+i {
+    position:absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
