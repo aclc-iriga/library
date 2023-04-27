@@ -8,7 +8,7 @@ const app = Vue.createApp({
     },
     methods: {
         search: _.debounce(function() {
-            let q = this.query.toLowerCase();
+            let q = this.query.trim().toLowerCase();
             this.found = this.data.filter((d) => {
                 if(Array.isArray(d)) {
                     return d[0].toLowerCase().includes(q)
