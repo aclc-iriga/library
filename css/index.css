@@ -19,17 +19,6 @@ i {
 }
 
 th {
-    border: 1px rgba(0, 0, 0, 0.18) solid;
-}
-
-tbody {
-    border: 1px rgba(0, 0, 0, 0.18) solid;
-    font-size: 14px;
-}
-th, td {
-    border-bottom: 2px rgba(0, 0, 0, 0.18) solid;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+    text-align: center;
+    vertical-align: middle !important;
 }

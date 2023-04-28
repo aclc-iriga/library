@@ -15,37 +15,39 @@
             <thead class="sticky-top">
                 <tr class="bg-primary text-white">
                     <th colspan="9">
-                        <h3 style="display: flex; align-items: center;">
-                            <img src="img/ACLC-Logo.png" alt="" width="35" height="50" style="margin-right: 10px;">
-                            ACLC Iriga Library
-                        </h3>
+                        <div class="d-flex align-items-center">
+                            <img src="img/ACLC-Logo.png" class="ms-1 me-2" style="width: 32px;">
+                            <h4 class="m-0">
+                                ACLC Iriga Library
+                            </h4>
+                        </div>
                     </th>
                 </tr>
                 <tr class="bg-primary">
                     <th colspan="9">
                         <div style="position:relative;">
                             <input
-                                   v-model="query"
-                                   @input="search"
-                                   type="search"
-                                   class="form-control form-control-lg search"
-                                   placeholder="Search"
-                                   autofocus
+                               v-model="query"
+                               @input="search"
+                               type="search"
+                               class="form-control form-control-lg search"
+                               placeholder="Search"
+                               autofocus
                             />
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </th>
                 </tr>
                 <tr class="table-secondary">
-                    <th style="vertical-align: middle;"></th>
-                    <th style="vertical-align: middle;">Acc. No.</th>
-                    <th style="vertical-align: middle;">Title</th>
-                    <th style="vertical-align: middle;">Author</th>
-                    <th style="vertical-align: middle;">Publisher</th>
-                    <th style="vertical-align: middle;">Copyright</th>
-                    <th style="vertical-align: middle;">Edition</th>
-                    <th style="vertical-align: middle;">Fund</th>
-                    <th style="vertical-align: middle;">Year</th>
+                    <th></th>
+                    <th>Acc. No.</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                    <th>Copyright</th>
+                    <th>Edition</th>
+                    <th>Fund</th>
+                    <th>Year</th>
                 </tr>
             </thead>
             <tbody>
